@@ -1,70 +1,70 @@
-﻿using ConsoleApp1.Models;
+﻿using ConsoleApp1.Interfaces;
+using ConsoleApp1.Models;
 
 Console.WriteLine("Hello World");
 
-#region Upcasting,boxing, implicit
-//Shark shark = new Shark();
-//Eagle eagle = new Eagle();
-//int a = 0, b = 0;
-//bool isTrue = false;
-//object[] objects = {a,b,eagle,shark,isTrue,false,10,null};
-//Animal[] animals = { shark, eagle };
-//foreach (Animal animal in animals)
-//{
-//    Console.WriteLine(animal);
-//}
+#region Virtual method - overriding
+//Animal shark = new Shark();
+//Console.WriteLine(shark);
+//shark.Eat();
+//ILive eagle=new Eagle();
+//eagle.
 #endregion
 
-#region Downcasting, unboxing, explicit
-//Shark shark = new Shark();
-//Eagle eagle = new Eagle();
-//int a = 0, b = 0;
-//bool isTrue = false;
-//object[] objects = { a, b, eagle, shark, isTrue, false, 10, null };
-//foreach (object obj in objects)
+#region Single responsibility
+//int GetSumofOdd(int[] arr)
 //{
-//    if (obj is int result)
+//    int result = 0;
+//    foreach (int item in arr)
 //    {
-//        Console.WriteLine(result + 1);
+//        if (GetOdd(item))
+//        {
+//            result += item;
+//        }
 //    }
-//    //int? result=obj as int?;
-//    //if(result is not null)
-//    //{
-//    //    Console.WriteLine(result + 1);
-//    //}
+//    return result;
+//}
+
+//bool GetOdd(int num)
+//{
+//    return num % 2 != 0;
 //}
 #endregion
 
-#region Implicit & explicit operators
-//Dollar dollar = new Dollar(100);
-//Manat manat = dollar;
-//Console.WriteLine(manat.AZN);
-#endregion
 
-#region Operator overloading
-//int num1 = 20;
-//int num2 = 40;
-//string word1 = "asdasfd";
-//string word2 = "asdasfd";
-//Console.WriteLine(word2+word1);
-//Console.WriteLine(num2-num1);
-//Person p1 = new Person();
-//Person p2 = new Person();
-//Person p3 = new Person();
-//p1.Age = 34;
-//p2.Age = 16;
-//p3.Age = 26;
-//Console.WriteLine(p1 > p2);
-//Console.WriteLine(p1 + p2);
+#region Person Sort
+
+//Person person1 = new();
+//person1.Age = 20;
+//Person person2 = new();
+//person2.Age = 10;
+//Person person3 = new();
+//person3.Age = 50;
+//Person person4 = new();
+//person4.Age = 120;
+
+//Person[] people = {person2 , person1, person3, person4 };
 
 
-//Celsius celsius = new Celsius(100);
-//Fahrenheit fahrenheit = celsius;
-//Fahrenheit fahrenheit2 = new(56);
-//celsius = (Celsius)fahrenheit2;
+//for (int j = 0; j < people.Length - 1; j++)
+//{
+//    if (people[j] > people[j + 1])
+//    {
+//        Person temp = people[j];
+//        people[j] = people[j + 1];
+//        people[j + 1] = temp;
+//    }
+//}
 
-//Console.WriteLine(fahrenheit.fanarhet);
-//Console.WriteLine(celsius.celsius);
+//foreach (Person item in people)
+//{
+//    Console.WriteLine(item.Age);
+//}
 
+// 1, 12, 7, 5
+
+// 1, 7, 5, 12
+
+// 1, 5, 7, 12
 
 #endregion
